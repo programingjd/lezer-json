@@ -7,30 +7,44 @@ Object { "{" list<Property>? "}" }
 Array  { "[" list<value>? "]" }
 
 Property { PropertyName ":" value }
-PropertyName { string }
-
+PropertyName { string | propertyName }
 
 @tokens {
   True  { "true" }
   False { "false" }
   Null  { "null" }
 
-  Number { '-'? int frac? exp?  }
+  Number { '-'? int frac? exp? | '-'? int? '.' std.digit+ exp? }
   int  { '0' | $[1-9] std.digit* }
-  frac { '.' std.digit+ }
+  frac { '.' std.digit? }
   exp  { $[eE] $[+\-]? std.digit+ }
 
-  string { '"' char* '"' }
+  propertyName {
+    (![,:\[\]\{\} \n\r\t"'`/]) (![\n])* (![ \n\r\t])
+  }
+
+  string {
+    '"' char* '"' |
+    "'" char* "'" |
+    "`" char* "`"
+  }
   char { $[\u{20}\u{21}\u{23}-\u{5b}\u{5d}-\u{10ffff}] | "\\" esc }
   esc  { $["\\\/bfnrt] | "u" hex hex hex hex }
   hex  { $[0-9a-fA-F] }
 
+  LineComment { "//" ![\n]* }
+
+  BlockComment { "/*" blockCommentRest }
+  blockCommentRest { ![*] blockCommentRest | "*" blockCommentAfterStar }
+  blockCommentAfterStar { "/" | "*" blockCommentAfterStar | ![/*] blockCommentRest }
+
   whitespace { $[ \n\r\t] }
 
   "{" "}" "[" "]"
+
 }
 
-@skip { whitespace }
+@skip { whitespace | LineComment | BlockComment }
 list<item> { item ("," item)* }
 
 @detectDelim

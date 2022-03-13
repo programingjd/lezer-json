@@ -38,13 +38,21 @@ JsonText(Number)
 
 JsonText(Number)
 
-# Must Have Digits After Decimal
+# No Digit After Decimal is OK
 
 123.
 
 ==>
 
-JsonText(Number, ⚠)
+JsonText(Number)
+
+# No Digit Before Decimal is OK
+
+.123
+
+==>
+
+JsonText(Number)
 
 # Exponent: Lowercase e
 
@@ -73,6 +81,14 @@ JsonText(Number)
 # Exponent: Optional Minus Sign
 
 1E-5
+
+==>
+
+JsonText(Number)
+
+# Exponent With Decimal Without Trailing Digit
+
+1.E-5
 
 ==>
 
