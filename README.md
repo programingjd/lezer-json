@@ -30,7 +30,7 @@ Single and back quotes are allowed, and unquoted keys are allowed as well:
 ```
 
 Decimal values with no leading or trailing digits are allowed:
-```json
+```json5
 {
   "no_leading_zero": .125,
   "no_trailing_zero": 2.,
