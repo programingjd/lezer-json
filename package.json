@@ -10,7 +10,7 @@
   },
   "module": "dist/index.es.js",
   "types": "dist/index.d.ts",
-  "author": "Jerome David <rulfzid@gmail.com>",
+  "author": "Jerome David",
   "license": "MIT",
   "devDependencies": {
     "@lezer/generator": "^0.15.4",
