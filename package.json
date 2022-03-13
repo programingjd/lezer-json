@@ -23,7 +23,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/lezer-parser/json.git"
+    "url": "https://github.com/programingjd/lezer-json-lenient"
   },
   "scripts": {
     "build": "lezer-generator src/json.grammar -o src/parser && rollup -c",
