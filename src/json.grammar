@@ -20,7 +20,7 @@ PropertyName { string | propertyName }
   exp  { $[eE] $[+\-]? std.digit+ }
 
   propertyName {
-    (![,:\[\]\{\} \n\r\t"'`/]) (![\n])* (![ \n\r\t])
+    (![,:\[\]\{\} \n\r\t"'`/]) (![\n:])* (![ \n\r\t:])
   }
 
   string {
