@@ -1,6 +1,6 @@
 {
   "name": "lezer_json_lenient",
-  "version": "0.15.0",
+  "version": "6.0.0",
   "description": "lezer-based lenient JSON grammar",
   "main": "dist/index.cjs",
   "type": "module",
@@ -13,14 +13,14 @@
   "author": "Jerome David",
   "license": "MIT",
   "devDependencies": {
-    "@lezer/generator": "^0.16.0",
+    "@lezer/generator": "^1.0.0",
     "mocha": "^10.0.0",
     "rollup": "^2.52.2",
     "@rollup/plugin-node-resolve": "^9.0.0"
   },
   "dependencies": {
-    "@lezer/highlight": "^0.16.0",
-    "@lezer/lr": "^0.16.3"
+    "@lezer/highlight": "^1.0.0",
+    "@lezer/lr": "^1.0.0"
   },
   "repository": {
     "type": "git",
