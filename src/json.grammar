@@ -14,10 +14,10 @@ PropertyName { string | propertyName }
   False { "false" }
   Null  { "null" }
 
-  Number { '-'? int frac? exp? | '-'? int? '.' std.digit+ exp? }
-  int  { '0' | $[1-9] std.digit* }
+  Number { '-'? int frac? exp? | '-'? int? '.' @digit+ exp? }
+  int  { '0' | $[1-9] @digit* }
   frac { '.' std.digit? }
-  exp  { $[eE] $[+\-]? std.digit+ }
+  exp  { $[eE] $[+\-]? @digit+ }
 
   propertyName {
     (![,:\[\]\{\} \n\r\t"'`/]) (![\n:])* (![ \n\r\t:])

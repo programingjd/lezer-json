@@ -13,14 +13,14 @@
   "author": "Jerome David",
   "license": "MIT",
   "devDependencies": {
-    "@lezer/generator": "^1.0.0",
+    "@lezer/generator": "^1.1.0",
     "mocha": "^10.0.0",
     "rollup": "^2.52.2",
     "@rollup/plugin-node-resolve": "^9.0.0"
   },
   "dependencies": {
     "@lezer/highlight": "^1.0.0",
-    "@lezer/lr": "^1.0.0"
+    "@lezer/lr": "^1.1.0"
   },
   "repository": {
     "type": "git",
