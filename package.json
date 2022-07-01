@@ -1,6 +1,6 @@
 {
   "name": "lezer_json_lenient",
-  "version": "6.0.0",
+  "version": "6.2.0",
   "description": "lezer-based lenient JSON grammar",
   "main": "dist/index.cjs",
   "type": "module",
