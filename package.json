@@ -1,6 +1,6 @@
 {
   "name": "lezer_json_lenient",
-  "version": "6.6.0",
+  "version": "6.7.0",
   "description": "lezer-based lenient JSON grammar",
   "main": "dist/index.cjs",
   "type": "module",
@@ -19,8 +19,8 @@
     "@rollup/plugin-node-resolve": "^9.0.0"
   },
   "dependencies": {
-    "@lezer/highlight": "^1.1.4",
-    "@lezer/lr": "^1.3.4"
+    "@lezer/highlight": "^1.1.6",
+    "@lezer/lr": "^1.3.5"
   },
   "repository": {
     "type": "git",
