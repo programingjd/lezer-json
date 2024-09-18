@@ -21,7 +21,7 @@ let httpPlugin={
 }
 
 await build({
-  entryPoints: ['dist/index.es.js'],
+  entryPoints: ['dist/index.mjs'],
   outfile: 'dist/lezer-json.mjs',
   sourcemap: 'linked',
   bundle: true,

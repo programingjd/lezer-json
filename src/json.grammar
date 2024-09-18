@@ -2,12 +2,12 @@
 
 value { True | False | Null | Number | String | Object | Array }
 
-String { string }
+String[isolate] { string }
 Object { "{" list<Property>? "}" }
 Array  { "[" list<value>? "]" }
 
 Property { PropertyName ":" value }
-PropertyName { string | propertyName }
+PropertyName[isolate] { string | propertyName }
 
 @tokens {
   True  { "true" }
@@ -16,7 +16,7 @@ PropertyName { string | propertyName }
 
   Number { '-'? int frac? exp? | '-'? int? '.' @digit+ exp? }
   int  { '0' | $[1-9] @digit* }
-  frac { '.' std.digit? }
+  frac { '.' @digit? }
   exp  { $[eE] $[+\-]? @digit+ }
 
   propertyName {
